@@ -83,7 +83,8 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
           localStorage.removeItem("token");
           dispatch({ type: "SET_USER", payload: null });
         }
-      } catch (error) {
+      } catch (error : unknown) {
+        console.error("Authentication error:", error);
         dispatch({ type: "SET_USER", payload: null });
       }
     };
