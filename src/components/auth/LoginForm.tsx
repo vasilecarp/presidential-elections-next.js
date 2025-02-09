@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { useRouter } from "next/router";
-import { Input } from "../ui/Input";
-import { Button } from "../ui/Button";
+import { useRouter } from "next/navigation";
+import { Input } from "@/components/ui/Input";
+import { Button } from "@/components/ui/Button";
 
 export const LoginForm: React.FC = () => {
   const router = useRouter();

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { useRouter } from "next/router";
-import { Input } from "../ui/Input";
-import { Button } from "../ui/Button";
+import { useRouter } from "next/navigation";
+import {Input} from "@/components/ui/Input";
+import {Button} from "@/components/ui/Button";
 
-export const RegisterForm: React.FC = () => {
+const RegisterForm: React.FC = () => {
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
@@ -110,3 +110,5 @@ export const RegisterForm: React.FC = () => {
     </form>
   );
 };
+
+export default RegisterForm;
